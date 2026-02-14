@@ -17,9 +17,16 @@ body, html {
   padding: 2rem;
   text-align: center;
   box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-  max-width: 350px;
+
+  min-width: 350px;
+  width: fit-content;
+
+  position: relative;
+
   animation: float 6s ease-in-out infinite,
              glow 3s ease-in-out infinite alternate;
+
+  transition: width 0.3s ease;
 }
 
 @keyframes float {
@@ -118,13 +125,11 @@ button {
   justify-content: center;
   align-items: center;
 }
-.valentine-card {
-  position: relative;
-}
 #hearts {
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
 }
+
 

@@ -42,7 +42,10 @@ prompt.textContent = messages[noClicks % messages.length];
 yesBtn.addEventListener('click', () => {
   const card = document.querySelector('.valentine-card');
 
-  card.innerHTML = `
+  // Lock current width so it doesn't shrink
+  card.style.width = card.offsetWidth + "px";
+
+  card.innerHTML = ``
     <h1>Yay!! 💖</h1>
     <div class="photo-container">
       <img src="your-photo.jpg" alt="Her Photo">
@@ -132,3 +135,4 @@ document.addEventListener("mousemove", (e) => {
     sparkle.remove();
   }, 600);
 });
+
